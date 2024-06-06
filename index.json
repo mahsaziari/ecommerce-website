@@ -1,0 +1,39 @@
+Users Table:
+user_id (Primary Key)
+username
+email
+password
+address
+phone_number
+
+Products Table:
+product_id (Primary Key)
+name
+description
+price
+category_id (Foreign Key referencing Categories Table)
+
+Categories Table:
+category_id (Primary Key)
+name
+
+Orders Table:
+order_id (Primary Key)
+user_id (Foreign Key referencing Users Table)
+order_date
+total_price
+
+Order_Items Table:
+order_item_id (Primary Key)
+order_id (Foreign Key referencing Orders Table)
+product_id (Foreign Key referencing Products Table)
+quantity
+price_per_item
+
+Reviews Table:
+review_id (Primary Key)
+user_id (Foreign Key referencing Users Table)
+product_id (Foreign Key referencing Products Table)
+rating
+comment
+review_date
